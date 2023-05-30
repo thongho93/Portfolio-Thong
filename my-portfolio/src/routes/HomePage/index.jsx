@@ -1,34 +1,62 @@
 import * as React from "react";
-import { Container, Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import "../../styles/homePage.css";
-import { StyledMainH1 } from "../../styles/styledComponents/styledTypography";
+import {
+  StyledMainH1,
+  StyledSecondaryTypography,
+} from "../../styles/styledComponents/styledTypography";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import IconButton from "@mui/material/IconButton";
 
-function HomePage() {
+function HomePage({ aboutRef }) {
+  const handleArrowClick = () => {
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <Container maxWidth="xl">
+    <div style={{ height: "100vh", position: "relative" }}>
       <div className="backgroundImage">
         <Box
           sx={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            right: "0",
-            bottom: "200px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            zIndex: "1",
+            marginTop: "35px",
             backgroundColor: "rgba(0, 0, 0, 0.2)",
             flexDirection: "column",
+            minHeight: "100vh",
+            width: "100%",
           }}
         >
           <StyledMainH1 className="homePage_Title">Hi, I'm Thong</StyledMainH1>
           <div>
-            <Typography className="homePage_Subtitle">Web Developer & Designer</Typography>
+            <StyledSecondaryTypography className="homePage_Subtitle">
+              Web Developer & Designer
+            </StyledSecondaryTypography>
           </div>
+          <IconButton
+            onClick={handleArrowClick}
+            style={{
+              zIndex: 1,
+              position: "absolute",
+              bottom: "125px",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+          >
+            <KeyboardArrowDownIcon
+              sx={{
+                fontSize: "2.4rem",
+                color: "white",
+                "&:hover": {
+                  color: "lightgrey",
+                },
+              }}
+            />
+          </IconButton>
         </Box>
       </div>
-    </Container>
+    </div>
   );
 }
 

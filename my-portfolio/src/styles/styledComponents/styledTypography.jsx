@@ -6,6 +6,12 @@ export const StyledMainTypography = styled.div`
   letter-spacing: 0.05rem;
 `;
 
+export const StyledSecondaryTypography = styled.p`
+  font-family: "Roboto Slab", sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.05rem;
+`;
+
 export const StyledH1 = styled.h1`
   font-family: "Lato", sans-serif;
   text-decoration: none;

@@ -1,15 +1,18 @@
 import "./App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Routes, Outlet } from "react-router-dom";
 import Header from "./components/header";
 import HomePage from "./routes/HomePage";
+import AboutPage from "./routes/About";
 
 function Layout() {
+  const aboutRef = React.createRef();
+
   return (
     <div>
       <Header />
-      <Outlet />
+      <HomePage aboutRef={aboutRef} />
+      <AboutPage aboutRef={aboutRef} />
     </div>
   );
 }
@@ -17,11 +20,7 @@ function Layout() {
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-        </Route>
-      </Routes>
+      <Layout />
     </div>
   );
 }
