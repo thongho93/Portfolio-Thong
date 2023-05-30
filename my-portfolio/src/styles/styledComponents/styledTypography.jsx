@@ -9,10 +9,12 @@ export const StyledMainTypography = styled.div`
 export const StyledH1 = styled.h1`
   font-family: "Lato", sans-serif;
   text-decoration: none;
-  letter-spacing: 0.05rem;
-  font-size: 30px;
+  letter-spacing: 0.15rem;
   font-weight: 500;
   color: #f5f5f5;
   text-align: center;
-  font-size: 3rem;
+`;
+
+export const StyledMainH1 = styled(StyledH1)`
+  font-size: 4rem;
 `;

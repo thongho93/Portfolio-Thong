@@ -14,7 +14,6 @@ import {
   Fade,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import PropTypes from "prop-types";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
@@ -71,7 +70,9 @@ function Header(props) {
         <AppBar elevation={0}>
           <Container maxWidth="xl" sx={{ backgroundColor: "black" }}>
             <Toolbar disableGutters>
-              <DeveloperModeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+              <DeveloperModeIcon
+                sx={{ display: { xs: "none", md: "flex" }, mr: 1, fontSize: "33px" }}
+              />
               <Typography
                 variant="h6"
                 noWrap
@@ -82,11 +83,14 @@ function Header(props) {
                   display: { xs: "none", md: "flex" },
                   color: "inherit",
                   fontWeight: 700,
-                  fontSize: "18px",
+                  fontSize: "19px",
                   textTransform: "uppercase",
                   fontFamily: "Lato, sans-serif",
                   textDecoration: "none",
                   letterSpacing: ".05rem",
+                  "&:hover": {
+                    color: "lightgrey",
+                  },
                 }}
               >
                 Thong Ho
@@ -178,6 +182,10 @@ function Header(props) {
                       fontWeight: 700,
                       fontSize: "18px",
                       mx: 1,
+                      "&:hover": {
+                        backgroundColor: "black",
+                        color: "lightgrey",
+                      },
                     }}
                   >
                     {page}

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Container, Box, Typography } from "@mui/material";
 import "../../styles/homePage.css";
-import { StyledH1 } from "../../styles/styledComponents/styledTypography";
+import { StyledMainH1 } from "../../styles/styledComponents/styledTypography";
 
 function HomePage() {
   return (
@@ -13,7 +13,7 @@ function HomePage() {
             top: "0",
             left: "0",
             right: "0",
-            bottom: "0",
+            bottom: "200px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -22,7 +22,7 @@ function HomePage() {
             flexDirection: "column",
           }}
         >
-          <StyledH1 className="homePage_Title">Hi, I'm Thong</StyledH1>
+          <StyledMainH1 className="homePage_Title">Hi, I'm Thong</StyledMainH1>
           <div>
             <Typography className="homePage_Subtitle">Web Developer & Designer</Typography>
           </div>
