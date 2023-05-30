@@ -1,29 +1,23 @@
 import * as React from "react";
-import { Container, Box } from "@mui/material";
+import { Box } from "@mui/material";
+import { StyledH2 } from "../../styles/styledComponents/styledTypography";
 
 function AboutPage({ aboutRef }) {
   return (
     <div ref={aboutRef} style={{ height: "100vh" }}>
       <Box
         sx={{
-          my: 2,
           minHeight: "100vh",
           width: "100%",
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           backgroundColor: "white",
           color: "black",
+          justifyContent: "center",
         }}
       >
-        {[...new Array(12)]
-          .map(
-            () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-          )
-          .join("\n")}
+        <div className="mt-5">
+          <StyledH2 className="mt-5 mb-2 aboutPage_Title">Get to know me</StyledH2>
+        </div>
       </Box>
     </div>
   );

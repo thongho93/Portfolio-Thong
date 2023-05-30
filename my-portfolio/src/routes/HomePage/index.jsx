@@ -21,7 +21,6 @@ function HomePage({ aboutRef }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "35px",
             backgroundColor: "rgba(0, 0, 0, 0.2)",
             flexDirection: "column",
             minHeight: "100vh",
