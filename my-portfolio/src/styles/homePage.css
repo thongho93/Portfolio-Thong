@@ -16,7 +16,6 @@
 }
 
 .homePage_Title {
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 .homePage_Subtitle {
@@ -26,6 +25,71 @@
 }
 
 /* About Page */
+.aboutPage_Container {
+  min-height: 100vh;
+  background-color: white;
+}
 .aboutPage_Title {
   text-transform: uppercase;
+  font-size: 35px;
+  margin-top: 45px;
+}
+.aboutPage_Image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.aboutPage_Text a {
+  text-decoration: none;
+  color: rgb(49, 43, 155);
+  font-weight: 500;
+}
+.aboutPage_Text a:hover {
+  color: rgb(49, 43, 155);
+  text-decoration: underline;
+}
+.aboutPage_SelfClaimContainer {
+  background-color: #f0f0f0;
+  padding: 20px 60px;
+  width: 650px;
+  margin: 0 auto;
+}
+.aboutPage_SubtitleContainer {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #111111;
+  display: flex;
+  justify-content: center;
+}
+
+/* Passion Page */
+.passionPage_Container {
+  min-height: 100vh;
+}
+.passionPage_Row {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.passionPage_Title {
+  margin-top: 45px;
+}
+.passionPage_IconContainer {
+  background-color: rgb(49, 43, 155);
+  border-radius: 50%;
+  padding: 50px;
+}
+.passionPage_IconContainer:hover .passionPage_IconSpin {
+  animation: spin 0.42s linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

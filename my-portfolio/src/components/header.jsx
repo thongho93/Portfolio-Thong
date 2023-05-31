@@ -62,7 +62,7 @@ function Header(props) {
     setAnchorElNav(null);
   };
 
-  const pages = ["About", "Passion", "Projects", "Experience", "Contact"];
+  const pages = ["About", "Passion", "Experience", "Projects", "Contact"];
   return (
     <StyledEngineProvider injectFirst>
       <React.Fragment>
