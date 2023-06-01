@@ -35,8 +35,9 @@ function AboutPage({ aboutRef, passionRef }) {
         </div>
         <div>
           <StyledP className="mt-3 mb-3 aboutPage_Text">
-            Hey! My name is <strong>Thong</strong> and I'm a web developer with a passion for
-            creating beautiful, intuitive and highly functional websites. I have just graduated as a{" "}
+            Hey! My name is <strong className="strongText">Thong</strong> and I'm a web developer
+            with a passion for creating beautiful, intuitive and highly functional websites. I have
+            just graduated as a{" "}
             <a target="_blank" rel="noopener noreferrer" href="https://www.noroff.no/index.php">
               front end developer
             </a>{" "}
