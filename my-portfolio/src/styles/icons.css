@@ -1,0 +1,25 @@
+.techIcon {
+  font-size: 80px;
+  color: rgb(80, 76, 140);
+}
+#html_Icon:hover {
+  color: rgb(240, 89, 63);
+}
+#css_Icon:hover {
+  color: rgb(0, 178, 237);
+}
+#sass_Icon:hover {
+  color: rgb(231, 79, 190);
+}
+#js_Icon:hover {
+  color: rgb(236, 201, 0);
+}
+#react_Icon:hover {
+  color: rgb(90, 205, 237);
+}
+#bootstrap_Icon:hover {
+  color: rgb(80, 52, 122);
+}
+#gitHub_Icon:hover {
+  color: rgb(22, 20, 20);
+}

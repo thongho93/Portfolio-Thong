@@ -5,11 +5,17 @@ import "../../styles/homePage.css";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import IconButton from "@mui/material/IconButton";
 
-function PassionPage({ passionRef }) {
+function PassionPage({ passionRef, experienceRef }) {
+  const handleArrowClickExperience = () => {
+    experienceRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div ref={passionRef} className="passionPage_Container">
-      <Row className="passionPage_Row m-0">
+    <div ref={passionRef} className="passionPage_Container pb-5">
+      <Row className="passionPage_Row m-0 pb-5">
         <Col className="mt-5 d-flex flex-column align-items-center justify-content-start">
           <div>
             <StyledH2 className=" mb-1 passionPage_Title">My passion</StyledH2>
@@ -65,6 +71,24 @@ function PassionPage({ passionRef }) {
           </div>
         </Col>
       </Row>
+      <IconButton
+        onClick={handleArrowClickExperience}
+        style={{
+          zIndex: 1,
+          marginBottom: "100px",
+          marginTop: "20px",
+        }}
+      >
+        <KeyboardArrowDownIcon
+          sx={{
+            fontSize: "2.4rem",
+            color: "black",
+            "&:hover": {
+              color: "lightgrey",
+            },
+          }}
+        />
+      </IconButton>
     </div>
   );
 }

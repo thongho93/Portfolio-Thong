@@ -9,7 +9,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import IconButton from "@mui/material/IconButton";
 
 function AboutPage({ aboutRef, passionRef }) {
-  const handleArrowClickExperience = () => {
+  const handleArrowClickPassion = () => {
     passionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -75,7 +75,7 @@ function AboutPage({ aboutRef, passionRef }) {
           </div>
         </div>
         <IconButton
-          onClick={handleArrowClickExperience}
+          onClick={handleArrowClickPassion}
           style={{
             zIndex: 1,
             marginBottom: "100px",
