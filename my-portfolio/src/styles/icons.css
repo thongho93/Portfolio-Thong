@@ -1,5 +1,5 @@
 .techIcon {
-  font-size: 80px;
+  font-size: 75px;
   color: rgb(80, 76, 140);
 }
 #html_Icon:hover {
@@ -22,4 +22,7 @@
 }
 #gitHub_Icon:hover {
   color: rgb(22, 20, 20);
+}
+#wordPress_Icon:hover {
+  color: #00749c;
 }

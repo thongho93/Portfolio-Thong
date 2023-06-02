@@ -1,7 +1,7 @@
 .css-6hp17o-MuiList-root-MuiMenu-list {
   background-color: black;
 }
-.MuiPopover-paper {
+.header_Menu_Container .MuiPopover-paper {
   border-radius: 0;
   left: 0 !important;
   top: 64px;

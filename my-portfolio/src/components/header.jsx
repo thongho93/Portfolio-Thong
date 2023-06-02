@@ -15,10 +15,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Fab from "@mui/material/Fab";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
-import "../styles/globalMui.css";
+import "../styles/header.css";
 import { StyledEngineProvider } from "@mui/material/styles";
+import RocketIcon from "@mui/icons-material/Rocket";
 
 // Define your ScrollTop component
 function ScrollTop(props) {
@@ -43,7 +43,7 @@ function ScrollTop(props) {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: "fixed", bottom: 16, right: 16 }}
+        sx={{ position: "fixed", bottom: 26, right: 26 }}
       >
         {children}
       </Box>
@@ -96,7 +96,6 @@ function Header(props) {
                 Thong Ho
               </Typography>
               {/* Tablet size */}
-
               <DeveloperModeIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
               <Typography
                 variant="h5"
@@ -147,6 +146,7 @@ function Header(props) {
                     width: "100%",
                     display: { xs: "block", md: "none" },
                   }}
+                  className="header_Menu_Container"
                 >
                   {pages.map((page) => (
                     <MenuItem
@@ -209,7 +209,7 @@ function Header(props) {
               },
             }}
           >
-            <KeyboardArrowUpIcon />
+            <RocketIcon sx={{ padding: " 2px" }} />
           </Fab>
         </ScrollTop>{" "}
       </React.Fragment>

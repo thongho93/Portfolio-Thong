@@ -36,16 +36,20 @@ function AboutPage({ aboutRef, passionRef }) {
         <div>
           <StyledP className="mt-3 mb-3 aboutPage_Text">
             Hey! My name is <strong className="strongText">Thong</strong> and I'm a web developer
-            with a passion for creating beautiful, intuitive and highly functional websites. I have
+            with a passion for creating beautiful, intuitive and highly functional websites. I've
             just graduated as a{" "}
-            <a target="_blank" rel="noopener noreferrer" href="https://www.noroff.no/index.php">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.noroff.no/studier/fagskole/frontend-utvikling"
+            >
               front end developer
             </a>{" "}
             from the school of technology -{" "}
             <a target="_blank" rel="noopener noreferrer" href="https://www.noroff.no/index.php">
               Noroff
             </a>
-            . I am a fast learner and I am always looking for new challenges. I am currently looking
+            . I'm a fast learner and I'm always looking for new challenges. I'm currently looking
             for a job as a web developer.
           </StyledP>
           <StyledP className="mt-3 mb-3 aboutPage_Text">
