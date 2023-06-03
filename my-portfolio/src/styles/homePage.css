@@ -162,21 +162,108 @@ a:hover {
 /* Work Page*/
 .workPage_Container {
   min-height: 100vh;
-  background-color: #f0f0f0;
 }
 .workPage_Row {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 .workPage_Title {
   margin-top: 45px;
+}
+.workPage_Card {
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .workPage_CardImage {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+}
+/* hover effect */
+.card-img-container {
+  position: relative;
+}
+.card-img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+.card-img-container:hover .workPage_CardImage {
+  opacity: 0.35;
+}
+.card-img-container:hover::before {
+  background: rgb(0, 0, 0);
+}
+.hover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-img-container:hover .hover-icon {
+  opacity: 1;
+}
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-title {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: rgb(39, 35, 112);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transition: bottom 0.3s ease;
+}
+
+.card-img-container:hover .project-title {
+  bottom: 0;
+}
+
+/* breakpoints */
+@media screen and (max-width: 768px) {
+  .workPage_Row {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .workPage_Row {
+    padding: 0 10px;
+  }
+}
+
+/* Modal */
+.modal_Container {
+  z-index: 1400;
+  margin-top: 50px;
+}
+.modal_Body {
+  padding: 20px;
+}
+.modal_Header {
+  display: flex;
+  justify-content: center;
+}
+.modal_Title {
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
