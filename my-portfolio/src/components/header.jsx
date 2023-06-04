@@ -53,13 +53,25 @@ function ScrollTop(props) {
 
 function Header(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const { aboutRef, passionRef, experienceRef, workRef, contactRef } = props;
+  const pageRefs = {
+    About: aboutRef,
+    Passion: passionRef,
+    Experience: experienceRef,
+    Projects: workRef,
+    Contact: contactRef,
+  };
+  const handlePageClick = (page) => {
+    setTimeout(() => {
+      pageRefs[page].current.scrollIntoView({ behavior: "smooth" });
+    }, 300);
   };
 
   const pages = ["About", "Passion", "Experience", "Projects", "Contact"];
@@ -151,7 +163,11 @@ function Header(props) {
                   {pages.map((page) => (
                     <MenuItem
                       key={page}
-                      onClick={handleCloseNavMenu}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        handleCloseNavMenu();
+                        handlePageClick(page);
+                      }}
                       sx={{
                         width: "100vw",
                         display: "flex",
@@ -173,7 +189,9 @@ function Header(props) {
                 {pages.map((page) => (
                   <Button
                     key={page}
-                    onClick={handleCloseNavMenu}
+                    onClick={() => {
+                      handlePageClick(page);
+                    }}
                     sx={{
                       my: 2,
                       color: "white",

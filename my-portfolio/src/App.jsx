@@ -24,7 +24,13 @@ function Layout() {
 
   return (
     <div style={{ backgroundColor: "white" }}>
-      <Header />
+      <Header
+        aboutRef={aboutRef}
+        passionRef={passionRef}
+        experienceRef={experienceRef}
+        workRef={workRef}
+        contactRef={contactRef}
+      />{" "}
       <HomePage aboutRef={aboutRef} />
       <AboutPage aboutRef={aboutRef} passionRef={passionRef} />{" "}
       <PassionPage passionRef={passionRef} experienceRef={experienceRef} />
