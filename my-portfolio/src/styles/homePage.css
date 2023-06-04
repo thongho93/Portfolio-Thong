@@ -126,7 +126,7 @@ a:hover {
 }
 
 .experiencePage_Footer_Col {
-  margin: 0 0 150px 0;
+  margin: 0 0 100px 0;
 }
 .experiencePage_Footer_Image {
   background: url("../pictures/backgroundExperiencePage.jpg") no-repeat center;
@@ -167,7 +167,7 @@ a:hover {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 40px 150px 40px;
 }
 .workPage_Title {
   margin-top: 45px;
@@ -221,7 +221,6 @@ a:hover {
   position: relative;
   overflow: hidden;
 }
-
 .project-title {
   position: absolute;
   bottom: -100%;
@@ -233,7 +232,6 @@ a:hover {
   text-align: center;
   transition: bottom 0.3s ease;
 }
-
 .card-img-container:hover .project-title {
   bottom: 0;
 }
@@ -266,4 +264,47 @@ a:hover {
   display: flex;
   flex: 1;
   justify-content: center;
+}
+
+/* Contact Page */
+.contactPage_Container {
+  min-height: 70vh;
+  background-color: #f0f0f0;
+}
+.contactPage_Row {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.contactPage_Icon {
+  font-size: 60px;
+  color: rgb(39, 35, 112);
+}
+.contactPage_Title_Container {
+  margin-top: 45px;
+}
+.contactPage_Title {
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+/* Footer */
+.footer_Container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  background-color: #222;
+  padding: 60px 0 20px 0;
+}
+x .footer_IconContainer:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+.footer_Text {
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  font-family: "Lato", Courier, monospace;
 }
