@@ -11,10 +11,8 @@ import "../../styles/icons.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Popover from "@mui/material/Popover";
 import { Typography } from "@mui/material";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import IconButton from "@mui/material/IconButton";
 
-function ExperiencePage({ experienceRef, workRef }) {
+function ExperiencePage({ experienceRef }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [popoverContent, setPopoverContent] = React.useState("");
 
@@ -29,10 +27,6 @@ function ExperiencePage({ experienceRef, workRef }) {
   };
 
   const open = Boolean(anchorEl);
-
-  const handleArrowClickExperience = () => {
-    workRef.current.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div ref={experienceRef} className="experiencePage_Container">
@@ -525,23 +519,6 @@ function ExperiencePage({ experienceRef, workRef }) {
           </div>
         </div>
       </Col>
-      <IconButton
-        onClick={handleArrowClickExperience}
-        style={{
-          zIndex: 1,
-          marginBottom: "100px",
-        }}
-      >
-        <KeyboardArrowDownIcon
-          sx={{
-            fontSize: "2.4rem",
-            color: "black",
-            "&:hover": {
-              color: "lightgrey",
-            },
-          }}
-        />
-      </IconButton>
     </div>
   );
 }

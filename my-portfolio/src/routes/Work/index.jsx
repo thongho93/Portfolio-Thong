@@ -3,8 +3,6 @@ import { Row, Col, Modal, Card } from "react-bootstrap";
 import { StyledH1, StyledH3, StyledP } from "../../styles/styledComponents/styledTypography";
 import "../../styles/homePage.css";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import IconButton from "@mui/material/IconButton";
 import project1 from "../../pictures/project1.jpg";
 import project2 from "../../pictures/project2.jpg";
 import project3 from "../../pictures/project3.jpg";
@@ -21,7 +19,7 @@ const projects = [
   { image: project6, alt: "Community Science Museum" },
 ];
 
-function WorkPage({ workRef, contactRef }) {
+function WorkPage({ workRef }) {
   const [show, setShow] = useState(false);
   const [currentProject, setCurrentProject] = useState({});
 
@@ -29,10 +27,6 @@ function WorkPage({ workRef, contactRef }) {
   const handleShow = (project) => {
     setCurrentProject(project);
     setShow(true);
-  };
-
-  const handleArrowClickWork = () => {
-    contactRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -91,23 +85,6 @@ function WorkPage({ workRef, contactRef }) {
           </Modal>
         </Col>
       </Row>
-      <IconButton
-        onClick={handleArrowClickWork}
-        style={{
-          zIndex: 1,
-          marginBottom: "100px",
-        }}
-      >
-        <KeyboardArrowDownIcon
-          sx={{
-            fontSize: "2.4rem",
-            color: "black",
-            "&:hover": {
-              color: "lightgrey",
-            },
-          }}
-        />
-      </IconButton>
     </div>
   );
 }

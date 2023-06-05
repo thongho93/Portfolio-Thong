@@ -3,7 +3,7 @@ a:hover {
   text-decoration: none;
   color: white;
 }
-/* Home Page */
+/* HOME PAGE */
 .backgroundImage {
   position: absolute;
   width: 100%;
@@ -27,23 +27,24 @@ a:hover {
   color: white;
   font-family: "Roboto Slab", Courier, monospace;
   font-size: 19.5px;
+  margin-top: 5px;
 }
 
-/* About Page */
+/* ABOUT PAGE*/
 .aboutPage_Container {
   min-height: 100vh;
   background-color: white;
+  padding: 80px 0;
 }
 .aboutPage_Title {
-  text-transform: uppercase;
   font-size: 35px;
-  margin-top: 45px;
 }
 .aboutPage_Image {
   width: 170px;
   height: 170px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .aboutPage_Text a {
   text-decoration: none;
@@ -58,24 +59,50 @@ a:hover {
 .strongText::selection {
   background-color: #ffb8b1;
 }
-.aboutPage_SelfClaimContainer {
+.aboutPage_SelfClaim_Container {
   background-color: #f0f0f0;
   padding: 20px 60px;
   width: 650px;
   margin: 0 auto;
 }
-.aboutPage_SubtitleContainer {
+.aboutPage_Subtitle_Container {
   margin-bottom: 10px;
   text-transform: uppercase;
   color: #111111;
   display: flex;
   justify-content: center;
 }
+.aboutPage_SelfClaim_Icons_Container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.aboutPage_SelfClaim_Icons_Body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* breakpoints */
+@media screen and (max-width: 690px) {
+  .aboutPage_SelfClaim_Container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .aboutPage_SelfClaim_Icons_Container {
+    flex-direction: column;
+  }
+  .aboutPage_SelfClaim_Icons_Body {
+    margin-bottom: 20px;
+  }
+}
 
 /* Passion Page */
 .passionPage_Container {
   min-height: 100vh;
   background-color: #f0f0f0;
+  padding: 80px 0;
 }
 .passionPage_Row {
   min-height: 100vh;
@@ -85,7 +112,10 @@ a:hover {
   padding: 0 20px;
 }
 .passionPage_Title {
-  margin-top: 45px;
+  font-size: 35px;
+}
+.passionPage_Subtitle {
+  font-size: 22.5px;
 }
 .passionPage_IconContainer {
   background-color: rgb(39, 35, 112);
