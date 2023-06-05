@@ -1,28 +1,27 @@
 .techIcon {
   font-size: 75px;
-  color: rgb(80, 76, 140);
 }
-#html_Icon:hover {
-  color: rgb(240, 89, 63);
+#html_Icon {
+  color: #e34f26;
 }
-#css_Icon:hover {
-  color: rgb(0, 178, 237);
+#css_Icon {
+  color: #005a9c;
 }
-#sass_Icon:hover {
-  color: rgb(231, 79, 190);
+#sass_Icon {
+  color: #c69;
 }
-#js_Icon:hover {
-  color: rgb(236, 201, 0);
+#js_Icon {
+  color: #f0db4f;
 }
-#react_Icon:hover {
-  color: rgb(90, 205, 237);
+#react_Icon {
+  color: #61dafb;
 }
-#bootstrap_Icon:hover {
-  color: rgb(80, 52, 122);
+#bootstrap_Icon {
+  color: #563d7c;
 }
-#gitHub_Icon:hover {
-  color: rgb(22, 20, 20);
+#gitHub_Icon {
+  color: #171515;
 }
-#wordPress_Icon:hover {
+#wordPress_Icon {
   color: #00749c;
 }

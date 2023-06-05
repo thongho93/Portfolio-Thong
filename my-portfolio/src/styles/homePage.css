@@ -34,7 +34,7 @@ a:hover {
 .aboutPage_Container {
   min-height: 100vh;
   background-color: white;
-  padding: 80px 0;
+  padding: 75px 0;
 }
 .aboutPage_Title {
   font-size: 35px;
@@ -102,7 +102,7 @@ a:hover {
 .passionPage_Container {
   min-height: 100vh;
   background-color: #f0f0f0;
-  padding: 80px 0;
+  padding: 75px 0;
 }
 .passionPage_Row {
   min-height: 100vh;
@@ -136,35 +136,46 @@ a:hover {
   }
 }
 
-/* Experience Page*/
+/* EXPERIENCE PAGE*/
 .experiencePage_Container {
   min-height: 100vh;
   background-color: white;
+  padding: 75px 0;
 }
 .experiencePage_Row {
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+.row > * {
+  padding: 0;
+}
+.experiencePage_Col {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   padding: 0 20px;
 }
 .experiencePage_Title {
-  margin-top: 45px;
+  font-size: 35px;
 }
 .experiencePage_Subtitle {
   margin-bottom: 40px;
 }
-
-.experiencePage_Footer_Col {
-  margin: 0 0 100px 0;
+.techIcons_Container {
+  margin-bottom: 80px;
+  max-width: 650px;
 }
+
 .experiencePage_Footer_Image {
   background: url("../pictures/backgroundExperiencePage.jpg") no-repeat center;
   background-attachment: fixed;
   width: 100%;
   height: 300px;
   object-fit: cover;
-  background-size: 170% auto;
+  background-size: 240% auto;
 }
 .experiencePage_Footer_Content {
   display: flex;
@@ -176,6 +187,7 @@ a:hover {
 .experiencePage_Footer_Container_Text {
   color: white;
   text-align: center;
+  margin: 0 20px;
 }
 .experiencePage_Footer_Link {
   border: 1px solid white;
@@ -188,8 +200,32 @@ a:hover {
   background-color: white;
   color: black;
 }
+/* breakpoints */
+@media screen and (max-width: 769px) {
+  .experiencePage_Footer_Image {
+    background-size: 320% auto;
+  }
+}
+@media screen and (max-width: 575px) {
+  .techIcons_Container {
+    max-width: 450px;
+  }
+  .experiencePage_Footer_Image {
+    background-size: 580% auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .experiencePage_Footer_Image {
+    background-size: 680% auto;
+  }
+}
+@media screen and (max-width: 345px) {
+  .experiencePage_Footer_Image {
+    background-size: 780% auto;
+  }
+}
 
-/* Work Page*/
+/* WORK PAGE*/
 .workPage_Container {
   min-height: 100vh;
 }
