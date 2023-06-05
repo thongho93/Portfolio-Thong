@@ -39,11 +39,8 @@ function WorkPage({ workRef }) {
           <div className="mt-2">
             <StyledP>(More coming soon...)</StyledP>
           </div>
-          <div
-            className="mt-5 d-flex flex-column align-items-center justify-content-start"
-            style={{ maxWidth: "1150px" }}
-          >
-            <Row className="g-4">
+          <div className="mt-5 d-flex flex-column align-items-center justify-content-center">
+            <Row className="g-4 ">
               {projects.map((project, index) => (
                 <Col key={index} xl={4} md={6} sm={12}>
                   <Card className="workPage_Card">

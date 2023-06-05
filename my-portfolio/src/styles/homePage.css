@@ -98,7 +98,7 @@ a:hover {
   }
 }
 
-/* Passion Page */
+/* PASSION PAGE */
 .passionPage_Container {
   min-height: 100vh;
   background-color: #f0f0f0;
@@ -140,7 +140,7 @@ a:hover {
 .experiencePage_Container {
   min-height: 100vh;
   background-color: white;
-  padding: 75px 0;
+  padding: 75px 0 0 0;
 }
 .experiencePage_Row {
   min-height: 100vh;
@@ -228,17 +228,20 @@ a:hover {
 /* WORK PAGE*/
 .workPage_Container {
   min-height: 100vh;
+  padding: 75px 0;
 }
 .workPage_Row {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 40px 150px 40px;
+  padding: 0 20px;
 }
 .workPage_Title {
-  margin-top: 45px;
+  font-size: 35px;
 }
 .workPage_Card {
+  max-width: 400px;
+  margin: 0 auto;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -310,7 +313,7 @@ a:hover {
 }
 @media screen and (max-width: 375px) {
   .workPage_Row {
-    padding: 0 10px;
+    padding: 0 30px;
   }
 }
 
