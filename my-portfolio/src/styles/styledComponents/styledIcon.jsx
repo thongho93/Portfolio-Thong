@@ -18,5 +18,7 @@ export const FooterIcon = styled(BaseIcon)`
   color: #fff;
   &:hover {
     background-color: ${(props) => props.hoverColor};
+    transform: scale(1.1);
+    transition: transform 0.2s;
   }
 `;

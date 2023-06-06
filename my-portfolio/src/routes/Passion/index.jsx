@@ -1,11 +1,6 @@
 import * as React from "react";
 import { Row, Col } from "react-bootstrap";
-import {
-  StyledH2,
-  StyledH3,
-  StyledP,
-  StyledH1,
-} from "../../styles/styledComponents/styledTypography";
+import { StyledH2, StyledP, StyledH1 } from "../../styles/styledComponents/styledTypography";
 import "../../styles/homePage.css";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import DataObjectIcon from "@mui/icons-material/DataObject";
