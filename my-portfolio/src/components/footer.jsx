@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer_Container">
       <div>
-        <Row className="g-1">
+        <Row>
           <Col className="footer_Col">
             <a href="https://www.facebook.com/thongh/" target="_blank" rel="noopener noreferrer">
               <FooterIcon className="footer_IconContainer" hoverColor="#1877F2">

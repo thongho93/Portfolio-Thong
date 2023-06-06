@@ -3,7 +3,7 @@ a:hover {
   text-decoration: none;
   color: white;
 }
-/* Home Page */
+/* HOME PAGE */
 .backgroundImage {
   position: absolute;
   width: 100%;
@@ -27,23 +27,24 @@ a:hover {
   color: white;
   font-family: "Roboto Slab", Courier, monospace;
   font-size: 19.5px;
+  margin-top: 5px;
 }
 
-/* About Page */
+/* ABOUT PAGE*/
 .aboutPage_Container {
   min-height: 100vh;
   background-color: white;
+  padding: 75px 0;
 }
 .aboutPage_Title {
-  text-transform: uppercase;
   font-size: 35px;
-  margin-top: 45px;
 }
 .aboutPage_Image {
   width: 170px;
   height: 170px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .aboutPage_Text a {
   text-decoration: none;
@@ -58,24 +59,50 @@ a:hover {
 .strongText::selection {
   background-color: #ffb8b1;
 }
-.aboutPage_SelfClaimContainer {
+.aboutPage_SelfClaim_Container {
   background-color: #f0f0f0;
   padding: 20px 60px;
   width: 650px;
   margin: 0 auto;
 }
-.aboutPage_SubtitleContainer {
+.aboutPage_Subtitle_Container {
   margin-bottom: 10px;
   text-transform: uppercase;
   color: #111111;
   display: flex;
   justify-content: center;
 }
+.aboutPage_SelfClaim_Icons_Container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.aboutPage_SelfClaim_Icons_Body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* breakpoints */
+@media screen and (max-width: 690px) {
+  .aboutPage_SelfClaim_Container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .aboutPage_SelfClaim_Icons_Container {
+    flex-direction: column;
+  }
+  .aboutPage_SelfClaim_Icons_Body {
+    margin-bottom: 20px;
+  }
+}
 
-/* Passion Page */
+/* PASSION PAGE */
 .passionPage_Container {
   min-height: 100vh;
   background-color: #f0f0f0;
+  padding: 75px 0;
 }
 .passionPage_Row {
   min-height: 100vh;
@@ -85,7 +112,10 @@ a:hover {
   padding: 0 20px;
 }
 .passionPage_Title {
-  margin-top: 45px;
+  font-size: 35px;
+}
+.passionPage_Subtitle {
+  font-size: 22.5px;
 }
 .passionPage_IconContainer {
   background-color: rgb(39, 35, 112);
@@ -106,35 +136,46 @@ a:hover {
   }
 }
 
-/* Experience Page*/
+/* EXPERIENCE PAGE*/
 .experiencePage_Container {
   min-height: 100vh;
   background-color: white;
+  padding: 75px 0 0 0;
 }
 .experiencePage_Row {
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+.row > * {
+  padding: 0;
+}
+.experiencePage_Col {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   padding: 0 20px;
 }
 .experiencePage_Title {
-  margin-top: 45px;
+  font-size: 35px;
 }
 .experiencePage_Subtitle {
   margin-bottom: 40px;
 }
-
-.experiencePage_Footer_Col {
-  margin: 0 0 100px 0;
+.techIcons_Container {
+  margin-bottom: 75px;
+  max-width: 650px;
 }
+
 .experiencePage_Footer_Image {
   background: url("../pictures/backgroundExperiencePage.jpg") no-repeat center;
   background-attachment: fixed;
   width: 100%;
   height: 300px;
   object-fit: cover;
-  background-size: 170% auto;
+  background-size: 240% auto;
 }
 .experiencePage_Footer_Content {
   display: flex;
@@ -146,6 +187,7 @@ a:hover {
 .experiencePage_Footer_Container_Text {
   color: white;
   text-align: center;
+  margin: 0 20px;
 }
 .experiencePage_Footer_Link {
   border: 1px solid white;
@@ -158,24 +200,53 @@ a:hover {
   background-color: white;
   color: black;
 }
+/* breakpoints */
+@media screen and (max-width: 769px) {
+  .experiencePage_Footer_Image {
+    background-size: 320% auto;
+  }
+}
+@media screen and (max-width: 575px) {
+  .techIcons_Container {
+    max-width: 450px;
+  }
+  .experiencePage_Footer_Image {
+    background-size: 580% auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .experiencePage_Footer_Image {
+    background-size: 680% auto;
+  }
+}
+@media screen and (max-width: 345px) {
+  .experiencePage_Footer_Image {
+    background-size: 780% auto;
+  }
+}
 
-/* Work Page*/
+/* WORK PAGE*/
 .workPage_Container {
   min-height: 100vh;
+  padding: 75px 0;
+  background-color: #f0f0f0;
 }
 .workPage_Row {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 40px 150px 40px;
+  padding: 0 100px;
 }
 .workPage_Title {
-  margin-top: 45px;
+  font-size: 35px;
 }
 .workPage_Card {
+  /* max-width: 400px; */
+  margin: 0 15px;
   border: 0;
   border-radius: 0;
   cursor: pointer;
+  border: 0.5px solid #ddd;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .workPage_CardImage {
@@ -237,24 +308,45 @@ a:hover {
 }
 
 /* breakpoints */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .workPage_Row {
-    padding: 0 30px;
+    padding: 0 75px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .workPage_Row {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .workPage_Row {
+    padding: 0 40px;
   }
 }
 @media screen and (max-width: 375px) {
   .workPage_Row {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
 /* Modal */
+.modal {
+  --bs-modal-border-radius: 0;
+  --bs-modal-width: 70%;
+}
 .modal_Container {
   z-index: 1400;
-  margin-top: 50px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modal_Body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal_Header {
   display: flex;
@@ -265,14 +357,36 @@ a:hover {
   flex: 1;
   justify-content: center;
 }
+.modal_Images_Container {
+  display: flex;
+  justify-content: center;
+}
+.modal_Image {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+/* carousel */
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: none;
+}
+.carousel-indicators {
+  bottom: -50px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: rgb(49, 43, 155);
+  height: 3.5px;
+}
 
 /* Contact Page */
 .contactPage_Container {
-  min-height: 70vh;
-  background-color: #f0f0f0;
+  padding: 75px 0;
+  background-color: #ffffff;
 }
 .contactPage_Row {
-  min-height: 70vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -282,12 +396,9 @@ a:hover {
   font-size: 60px;
   color: rgb(39, 35, 112);
 }
-.contactPage_Title_Container {
-  margin-top: 45px;
-}
 .contactPage_Title {
-  font-size: 30px;
-  margin-top: 25px;
+  font-size: 35px;
+  margin-top: 27px;
 }
 
 /* Footer */
@@ -296,15 +407,18 @@ a:hover {
   justify-content: center;
   flex: 1;
   background-color: #222;
-  padding: 60px 0 20px 0;
+  padding: 50px 0 20px 0;
 }
 x .footer_IconContainer:hover {
   color: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
+  transform: scale(1.07);
   transition: transform 0.2s;
 }
 .footer_Text {
   color: rgba(255, 255, 255, 1);
   display: flex;
   font-family: "Lato", Courier, monospace;
+}
+.footer_Col {
+  margin: 0 3.5px;
 }

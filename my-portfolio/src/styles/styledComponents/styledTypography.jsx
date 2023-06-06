@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 export const StyledMainTypography = styled.div`
   font-family: "Lato", sans-serif;
@@ -36,6 +37,12 @@ export const StyledMainH1 = styled(StyledH1)`
   ::selection {
     background-color: #ffb8b1;
   }
+  ${(props) =>
+    css`
+      @media screen and (max-width: 375px) {
+        font-size: 3.7rem;
+      }
+    `}
 `;
 
 export const StyledH2 = styled.h2`
@@ -62,15 +69,23 @@ export const StyledH3 = styled.h3`
 `;
 
 export const StyledP = styled.p`
+  max-width: 650px;
+  margin: 0 20px;
   font-family: "Roboto Slab", sans-serif;
   font-weight: 400;
-  text-decoration: none;
-  letter-spacing: 0.05rem;
   font-size: 17px;
-  color: #000000;
-  max-width: 650px;
+  text-decoration: none;
+  letter-spacing: 0.045rem;
+  text-align: justify;
   line-height: 1.9;
+  color: #000000;
   ::selection {
     background-color: #ffb8b1;
   }
+  ${(props) =>
+    css`
+      @media screen and (max-width: 375px) {
+        margin: 0;
+      }
+    `}
 `;
