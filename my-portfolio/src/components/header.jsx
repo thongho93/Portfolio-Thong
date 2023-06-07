@@ -22,7 +22,7 @@ import RocketIcon from "@mui/icons-material/Rocket";
 import "../styles/header.css";
 import { Tooltip } from "@mui/material";
 
-// Define your ScrollTop component
+// ScrollTop component
 function ScrollTop(props) {
   const { children } = props;
   const trigger = useScrollTrigger({
@@ -97,7 +97,7 @@ function Header(props) {
         <CssBaseline />
         <HideOnScroll {...props}>
           <AppBar elevation={0}>
-            <Container maxWidth="xl" sx={{ backgroundColor: "black" }}>
+            <Container maxWidth="lg" sx={{ backgroundColor: "black" }}>
               <Toolbar disableGutters>
                 <DeveloperModeIcon
                   sx={{ display: { xs: "none", md: "flex" }, mr: 1, fontSize: "33px" }}
@@ -241,15 +241,27 @@ function Header(props) {
             sx={{
               backgroundColor: "black",
               color: "white",
-              width: "42px",
-              height: "42px",
+              width: "52px",
+              height: "52px",
               "&:hover": {
                 backgroundColor: "#000000e6",
                 color: "white",
               },
+              "@media (max-width:575px)": {
+                width: "42px",
+                height: "42px",
+              },
             }}
           >
-            <RocketIcon sx={{ padding: " 2px", fontSize: "32px" }} />
+            <RocketIcon
+              sx={{
+                padding: " 2px",
+                fontSize: "40px",
+                "@media (max-width:575px)": {
+                  fontSize: "30px",
+                },
+              }}
+            />
           </Fab>
         </ScrollTop>{" "}
       </React.Fragment>
