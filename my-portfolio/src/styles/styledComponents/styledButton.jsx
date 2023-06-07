@@ -19,8 +19,18 @@ export const PrimaryButton = styled(BaseButton)`
   &:hover {
     background-color: rgb(39, 35, 112);
     color: #fff;
-    transform: scale(1.2);
+    transform: scale(1.17);
     transition: transform 0.2s;
     border: 2px solid rgb(39, 35, 112);
+  }
+`;
+
+export const ModalButton = styled(BaseButton)`
+  background-color: transparent;
+  color: rgb(39, 35, 112);
+  border: 2px solid rgb(39, 35, 112);
+  &:hover {
+    background-color: rgb(39, 35, 112);
+    color: #fff;
   }
 `;

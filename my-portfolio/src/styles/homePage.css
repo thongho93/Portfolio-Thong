@@ -361,16 +361,33 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+.carousel-item {
+  height: 450px;
+}
 .modal_Image {
   display: flex;
   width: 100%;
-  height: 350px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   background-repeat: no-repeat;
+}
+.modal_Button_ViewSite,
+.modal_Button_GitHub {
+  margin: 0 5px;
+}
+.modal_Footer_Container {
+  background-color: #f0f0f0;
+}
+.modal_Button_Close {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
 }
 /* carousel */
 .carousel-control-next-icon,
-.carousel-control-prev-icon {
+.carousel-control-prev-icon,
+.carousel-control-next,
+.carousel-control-prev {
   display: none;
 }
 .carousel-indicators {
@@ -381,7 +398,7 @@ a:hover {
   height: 3.5px;
 }
 
-/* Contact Page */
+/* CONTACT PAGE */
 .contactPage_Container {
   padding: 75px 0;
   background-color: #ffffff;
