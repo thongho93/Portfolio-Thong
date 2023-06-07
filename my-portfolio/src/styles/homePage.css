@@ -407,9 +407,9 @@ a:hover {
   justify-content: center;
   flex: 1;
   background-color: #222;
-  padding: 50px 0 20px 0;
+  padding: 50px 0 0 0;
 }
-x .footer_IconContainer:hover {
+.footer_IconContainer:hover {
   color: rgba(255, 255, 255, 1);
   transform: scale(1.07);
   transition: transform 0.2s;

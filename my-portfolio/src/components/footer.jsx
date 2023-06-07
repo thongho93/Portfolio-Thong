@@ -24,11 +24,7 @@ function ScrollTop(props) {
 
   return (
     <Fade in={trigger}>
-      <Box
-        onClick={handleClick}
-        role="presentation"
-        sx={{ position: "relative" }} // This is to position the hover text relative to the box
-      >
+      <Box onClick={handleClick} role="presentation" sx={{ position: "relative" }}>
         <Box
           sx={{
             "&:hover .hover-text": {
@@ -44,7 +40,7 @@ function ScrollTop(props) {
               fontFamily: "Roboto",
               fontWeight: "500",
               bottom: "-35px",
-              left: "-75px",
+              left: "-100px",
               width: "200px",
               textAlign: "center",
               color: "white",
@@ -107,7 +103,7 @@ function Footer(props) {
           </Col>
         </Row>
         <div className="d-flex flex-column justify-content-center align-items-center mt-4">
-          <div className="d-flex justify-content-center align-items-center mt-1">
+          <div className="d-flex justify-content-center align-items-center">
             <div>
               <ScrollTop {...props}>
                 <Fab
@@ -115,9 +111,10 @@ function Footer(props) {
                   aria-label="scroll back to top"
                   sx={{
                     backgroundColor: "transparent",
+                    border: "none",
                     color: "white",
-                    width: "50px",
-                    height: "50px",
+                    width: "0px",
+                    height: "0px",
                     "&:hover": {
                       backgroundColor: "transparent",
                       color: "white",
