@@ -24,7 +24,7 @@ function Layout() {
   const contactRef = React.createRef();
 
   return (
-    <div style={{ backgroundColor: "white" }}>
+    <div style={{ backgroundColor: "white", overflowX: "hidden" }}>
       <Header
         aboutRef={aboutRef}
         passionRef={passionRef}

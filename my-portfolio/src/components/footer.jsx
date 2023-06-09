@@ -2,8 +2,61 @@ import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/header.css";
 import { FooterIcon } from "../styles/styledComponents/styledIcon";
+import RocketIcon from "@mui/icons-material/Rocket";
+import { Fade, Fab, Box, useScrollTrigger, Typography } from "@mui/material";
 
-function Footer() {
+function ScrollTop(props) {
+  const { children } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 200,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector("#back-to-top-anchor");
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: "center",
+      });
+    }
+  };
+
+  return (
+    <Fade in={trigger}>
+      <Box onClick={handleClick} role="presentation" sx={{ position: "relative" }}>
+        <Box
+          sx={{
+            "&:hover .hover-text": {
+              opacity: 1,
+            },
+          }}
+        >
+          {children}
+          <Typography
+            className="hover-text"
+            sx={{
+              position: "absolute",
+              fontFamily: "Roboto",
+              fontWeight: "500",
+              bottom: "-35px",
+              left: "-100px",
+              width: "200px",
+              textAlign: "center",
+              color: "white",
+              opacity: 0,
+              transition: "opacity 0.3s",
+            }}
+          >
+            Beam me up, Scotty!
+          </Typography>
+        </Box>
+      </Box>
+    </Fade>
+  );
+}
+
+function Footer(props) {
   return (
     <footer className="footer_Container">
       <div>
@@ -49,7 +102,30 @@ function Footer() {
             </a>
           </Col>
         </Row>
-        <div className="d-flex justify-content-center align-items-center mt-4">
+        <div className="d-flex flex-column justify-content-center align-items-center mt-4">
+          <div className="d-flex justify-content-center align-items-center">
+            <div>
+              <ScrollTop {...props}>
+                <Fab
+                  size="small"
+                  aria-label="scroll back to top"
+                  sx={{
+                    backgroundColor: "transparent",
+                    border: "none",
+                    color: "white",
+                    width: "0px",
+                    height: "0px",
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                      color: "white",
+                    },
+                  }}
+                >
+                  <RocketIcon sx={{ padding: " 2px", fontSize: "60px" }} />
+                </Fab>
+              </ScrollTop>
+            </div>
+          </div>
           <p className="footer_Text">© 2023 Thong Ho</p>
         </div>
       </div>

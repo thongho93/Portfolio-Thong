@@ -21,14 +21,37 @@ import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import RocketIcon from "@mui/icons-material/Rocket";
 import "../styles/header.css";
 import { Tooltip } from "@mui/material";
+import { useState, useEffect } from "react";
 
-// Define your ScrollTop component
+// Bottom of page hook
+function useAtBottomOfPage() {
+  const [isBottom, setIsBottom] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const buffer = 70;
+      const isBottom =
+        window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.offsetHeight - buffer;
+      setIsBottom(isBottom);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return isBottom;
+}
+
+// ScrollTop component
 function ScrollTop(props) {
   const { children } = props;
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
   });
+
+  const isBottom = useAtBottomOfPage();
 
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector("#back-to-top-anchor");
@@ -41,11 +64,28 @@ function ScrollTop(props) {
   };
 
   return (
-    <Fade in={trigger}>
+    <Fade in={trigger && !isBottom}>
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: "fixed", bottom: 26, right: 28, zIndex: 1000 }}
+        sx={{
+          position: "fixed",
+          bottom: 40,
+          right: 145,
+          zIndex: 1000,
+          "@media (max-width:1024px)": {
+            bottom: 35,
+            right: 100,
+          },
+          "@media (max-width:768px)": {
+            bottom: 25,
+            right: 40,
+          },
+          "@media (max-width:375px)": {
+            bottom: 25,
+            right: 30,
+          },
+        }}
       >
         <Tooltip title="Beam me up, Scotty!" arrow>
           {children}
@@ -97,7 +137,7 @@ function Header(props) {
         <CssBaseline />
         <HideOnScroll {...props}>
           <AppBar elevation={0}>
-            <Container maxWidth="xl" sx={{ backgroundColor: "black" }}>
+            <Container maxWidth="lg" sx={{ backgroundColor: "black" }}>
               <Toolbar disableGutters>
                 <DeveloperModeIcon
                   sx={{ display: { xs: "none", md: "flex" }, mr: 1, fontSize: "33px" }}
@@ -239,17 +279,29 @@ function Header(props) {
             size="small"
             aria-label="scroll back to top"
             sx={{
-              backgroundColor: "black",
+              backgroundColor: "rgba(0, 0, 0, 0.9)",
               color: "white",
-              width: "42px",
-              height: "42px",
+              width: "48px",
+              height: "48px",
               "&:hover": {
-                backgroundColor: "#000000e6",
+                backgroundColor: "rgba(0, 0, 0, 1)",
                 color: "white",
+              },
+              "@media (max-width:575px)": {
+                width: "43px",
+                height: "43px",
               },
             }}
           >
-            <RocketIcon sx={{ padding: " 2px", fontSize: "32px" }} />
+            <RocketIcon
+              sx={{
+                padding: " 2px",
+                fontSize: "38px",
+                "@media (max-width:575px)": {
+                  fontSize: "32px",
+                },
+              }}
+            />
           </Fab>
         </ScrollTop>{" "}
       </React.Fragment>
