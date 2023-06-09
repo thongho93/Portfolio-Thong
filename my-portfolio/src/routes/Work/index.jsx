@@ -1,18 +1,106 @@
 import { useState } from "react";
 import { Row, Col, Modal, Card, Carousel } from "react-bootstrap";
-import { StyledH1, StyledH3, StyledP } from "../../styles/styledComponents/styledTypography";
+import {
+  StyledH1,
+  StyledH3,
+  StyledP,
+  StyledUL,
+  StyledLI,
+} from "../../styles/styledComponents/styledTypography";
 import "../../styles/homePage.css";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import project1 from "../../pictures/project1.jpg";
 import project1_1 from "../../pictures/project1_1.jpg";
 import project2 from "../../pictures/project2.jpg";
+import project2_1 from "../../pictures/project2_1.jpg";
 import project3 from "../../pictures/project3.jpg";
 import project4 from "../../pictures/project4.jpg";
+import project4_1 from "../../pictures/project4_1.jpg";
 import project5 from "../../pictures/project5.jpg";
+import project5_1 from "../../pictures/project5_1.jpg";
+import project5_2 from "../../pictures/project5_2.jpg";
 import project6 from "../../pictures/project6.jpg";
+import project6_1 from "../../pictures/project6_1.jpg";
+import project6_2 from "../../pictures/project6_2.jpg";
 import { BaseButton, ModalButton } from "../../styles/styledComponents/styledButton";
 
-const descriptionProject1 = `Holidaze is a fictional venue booking website. In this project, we will be working with the official API documentation provided by Holidaze to plan, design, and build a modern front-end accommodation booking application. The goal is to create a user-friendly and visually appealing application that allows users to book holidays at various venues and provides an admin-facing interface for managing venues and bookings.`;
+const descriptionProject1 = (
+  <div className="d-flex flex-column">
+    <StyledP>
+      Holidaze is a fictional venue booking website. In this project, we will be working with the
+      official API documentation provided by Holidaze to plan, design, and build a modern front-end
+      accommodation booking application. The goal is to create a user-friendly and visually
+      appealing application that allows users to book holidays at various venues and provides an
+      admin-facing interface for managing venues and bookings.
+    </StyledP>
+  </div>
+);
+
+const descriptionProject2 = (
+  <div className="d-flex flex-column">
+    <StyledP>
+      This project aim is to build a blog site where I can choose the theme and topic covered on the
+      blog.
+    </StyledP>
+    <StyledP>
+      {" "}
+      <strong>The project has the following required tasks:</strong>{" "}
+    </StyledP>
+    <StyledUL>
+      <StyledLI>
+        Home page must have a carousel (slider) showing the ‘Latest Posts’ where user can click to
+        see more posts.
+      </StyledLI>
+      <StyledLI>
+        Blog page must show the first ten blogs, and then click a button to load more posts.
+      </StyledLI>
+      <StyledLI>
+        Blog specific page must have a modal image giving the user a bigger view of that image.
+      </StyledLI>
+      <StyledLI>
+        Contact page that contains at least 4 textbox (name, email, subject and message content)
+        with JavaScript validation.
+      </StyledLI>
+      <StyledLI>
+        Use WordPress to publish contents, and making a call to the WordPress REST API to fetch the
+        data into my website.
+      </StyledLI>
+    </StyledUL>
+  </div>
+);
+
+const descriptionProject3 = (
+  <div className="d-flex flex-column">
+    <StyledP>
+      An auction site is looking to launch a website where users can add items to be bid on and bid
+      on items other users have put up for auction.
+    </StyledP>
+    <StyledP>
+      When a new user joins the website, they are given 1000 credits to use on the site. They can
+      get credits by selling items and use credit by buying items. Non-registered users can search
+      through the listings, but only registered users can make bids on listings.
+    </StyledP>
+    <StyledP>
+      {" "}
+      <strong>User stories:</strong>{" "}
+    </StyledP>
+    <StyledUL>
+      <StyledLI>A user with a stud.noroff.no email may register</StyledLI>
+      <StyledLI>A registered user may login</StyledLI>
+      <StyledLI>A registered user may logout</StyledLI>
+      <StyledLI>A registered user may update their avatar</StyledLI>
+      <StyledLI>A registered user may view their total credit</StyledLI>
+      <StyledLI>
+        A registered user may create a Listing with a title, deadline date, media gallery and
+        description
+      </StyledLI>
+      <StyledLI>A registered user may add a Bid to another user’s Listing</StyledLI>
+      <StyledLI>A registered user may view Bids made on a Listing</StyledLI>
+      <StyledLI>A registered user may use credit to make a Bid on another user’s Listing</StyledLI>
+      <StyledLI>An unregistered user may search through Listings</StyledLI>
+    </StyledUL>
+  </div>
+);
 
 const projects = [
   {
@@ -23,36 +111,42 @@ const projects = [
     githubUrl: "https://github.com/norbadboy/holidaze-project-exam-2-thong",
   },
   {
-    images: [project2],
+    images: [project2, project2_1],
     alt: "Home Luxury",
+    description: descriptionProject2,
     siteUrl: "https://spring2022.netlify.app/",
     githubUrl: "https://github.com/Noroff-FEU-Assignments/project-exam-1-norbadboy",
   },
   {
     images: [project3],
     alt: "EasyBid",
+    description: descriptionProject3,
     siteUrl: "https://thong-ho-semester-project-2.netlify.app/",
     githubUrl: "https://github.com/norbadboy/Semester-project-2",
   },
   {
-    images: [project4],
+    images: [project4, project4_1],
     alt: "Stay Home",
     siteUrl: "https://thong-css-frameworks.netlify.app/",
     githubUrl: "https://github.com/norbadboy/css-frameworks-resit",
   },
   {
-    images: [project5],
+    images: [project5, project5_1, project5_2],
     alt: "Ecom Store",
     siteUrl: "https://react-app-thong-23.netlify.app/",
     githubUrl: "https://github.com/norbadboy/React-CA-Thong-23",
   },
   {
-    images: [project6],
+    images: [project6, project6_1, project6_2],
     alt: "Community Science Museum",
     siteUrl: "https://semester-project-winter-2021-thong-ho.netlify.app/",
     githubUrl: "https://github.com/norbadboy/Noroff-FEU-Semester-Project-Thong",
   },
 ];
+
+function Description({ element }) {
+  return <div>{element}</div>;
+}
 
 function WorkPage({ workRef }) {
   const [show, setShow] = useState(false);
@@ -125,7 +219,7 @@ function WorkPage({ workRef }) {
                 </Carousel>
               </div>
               <div className="modal_Description mt-5">
-                <StyledP>{currentProject.description}</StyledP>
+                <Description element={currentProject.description} />
               </div>
               <div className="d-flex justify-content-center mt-3" style={{ width: "100%" }}>
                 {currentProject.siteUrl && (
@@ -136,7 +230,7 @@ function WorkPage({ workRef }) {
                     rel="noopener noreferrer"
                     className="modal_Button_ViewSite"
                   >
-                    View site
+                    Visit site
                   </ModalButton>
                 )}
                 <div className="d-flex flex-column align-items-center justify-content-center">

@@ -68,9 +68,8 @@ export const StyledH3 = styled.h3`
   }
 `;
 
-export const StyledP = styled.p`
-  max-width: 650px;
-  margin: 0 20px;
+const textStyles = css`
+  /* Removed margin and max-width from here */
   font-family: "Roboto Slab", sans-serif;
   font-weight: 400;
   font-size: 17px;
@@ -88,4 +87,22 @@ export const StyledP = styled.p`
         margin: 0;
       }
     `}
+`;
+
+export const StyledP = styled.p`
+  ${textStyles}
+  margin: 0 20px;
+  max-width: 650px;
+`;
+
+export const StyledUL = styled.ul`
+  ${textStyles}
+  margin: 0 10px;
+  max-width: 650px;
+`;
+
+export const StyledLI = styled.li`
+  ${textStyles}
+  margin: 0 3px;
+  max-width: 650px;
 `;

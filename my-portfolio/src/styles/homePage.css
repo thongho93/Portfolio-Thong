@@ -373,7 +373,7 @@ a:hover {
 }
 .modal_Button_ViewSite,
 .modal_Button_GitHub {
-  margin: 0 5px;
+  margin: 15px 5px;
 }
 .modal_Footer_Container {
   background-color: #f0f0f0;
@@ -395,7 +395,7 @@ a:hover {
 }
 .carousel-indicators [data-bs-target] {
   background-color: rgb(49, 43, 155);
-  height: 3.5px;
+  height: 3.6px;
 }
 
 /* CONTACT PAGE */
