@@ -42,7 +42,7 @@ const descriptionProject2 = (
       This project aim is to build a blog site where I can choose the theme and topic covered on the
       blog.
     </StyledP>
-    <StyledP>
+    <StyledP className="mt-2">
       {" "}
       <strong>The project has the following required tasks:</strong>{" "}
     </StyledP>
@@ -80,7 +80,7 @@ const descriptionProject3 = (
       get credits by selling items and use credit by buying items. Non-registered users can search
       through the listings, but only registered users can make bids on listings.
     </StyledP>
-    <StyledP>
+    <StyledP className="mt-2">
       {" "}
       <strong>User stories:</strong>{" "}
     </StyledP>
