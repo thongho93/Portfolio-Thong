@@ -102,6 +102,96 @@ const descriptionProject3 = (
   </div>
 );
 
+const descriptionProject5 = (
+  <div className="d-flex flex-column">
+    <StyledP>
+      The goal of this project is to apply knowledge of React to build an eCom store.
+    </StyledP>
+    <StyledP className="mt-2">
+      {" "}
+      <strong>The project has the following required pages for an eCom store:</strong>{" "}
+    </StyledP>
+    <StyledUL>
+      <StyledLI>Home page</StyledLI>
+      <StyledLI>Individual product page</StyledLI>
+      <StyledLI>Cart page</StyledLI>
+      <StyledLI>Checkout success page</StyledLI>
+    </StyledUL>
+    <StyledP className="mt-2">
+      {" "}
+      The Homepage should have a list of all the products. There should be a look-ahead search bar
+      that filters products when typing in a product name. Clicking on a product should take a user
+      to an individual product page.
+    </StyledP>
+    <StyledP className="mt-2">
+      {" "}
+      The individual product page should display data for a single product. There should be an Add
+      to cart button which, upon clicking, adds the product to the cart. The product page should
+      display the title of the product, the description and the image. There should also be reviews
+      listed for the product, if there are any. You should use the discountedPrice property to
+      display the price of the product. If there is a difference between the discountedPrice and
+      price properties then that means there is a discount for that product. Calculate what this
+      discount is and display it on the page.
+    </StyledP>
+    <StyledP className="mt-2">
+      {" "}
+      Clicking on the Cart icon will load the Cart page, which will list all of the products as well
+      as a total. The Cart page will have a Checkout button. Clicking this Checkout button then goes
+      to a Checkout success page.
+    </StyledP>
+    <StyledP className="mt-2">
+      {" "}
+      The Checkout success page will display a message to the user notifying them that their order
+      was successful. There should also be a link that lets a user go back to the store. The cart
+      must be cleared if the user gets to the Checkout success page.
+    </StyledP>
+  </div>
+);
+
+const descriptionProject6 = (
+  <div className="d-flex flex-column">
+    <StyledP>
+      An interactive science museum called the Community Science Museum is opening in your
+      town/city. Its core target audience is primary and middle school children (7-15) and families
+      with young children. The museum wants a website that is informative and appealing, that will
+      attract both middle school pupils and their parents. The site should appeal to youngsters
+      without pandering; it should take for granted that the audience is inquisitive and
+      intelligent. The website should be informative and engaging, but should encourage viewers to
+      visit the museum itself.
+    </StyledP>
+    <StyledP className="mt-2">
+      {" "}
+      <strong>Requirements:</strong>{" "}
+    </StyledP>
+    <StyledUL>
+      <StyledLI>The site must be have a design that appeals to the target audience.</StyledLI>
+      <StyledLI>The site must have at least 4-6 pages.</StyledLI>
+      <StyledLI>
+        Compositional principles, typography, and color schemes must be considered.
+      </StyledLI>
+      <StyledLI>Your HTML should be semantic and neatly indented.</StyledLI>
+      <StyledLI>
+        The site should use external CSS style sheets which follow the DRY principle.
+      </StyledLI>
+      <StyledLI>
+        The site should download quickly, and not be overly "heavy". Images should not be over
+        200kb.
+      </StyledLI>
+      <StyledLI>
+        The site should take WCAG principles into consideration, especially regarding hierarchy,
+        navigation, and color usage.
+      </StyledLI>
+      <StyledLI>
+        The site should be responsive, attractive, and easy to use on a variety of devices.
+      </StyledLI>
+      <StyledLI>
+        The site should show consideration for content strategy and SEO (consider your use of meta
+        tags and alt text).
+      </StyledLI>
+    </StyledUL>
+  </div>
+);
+
 const projects = [
   {
     images: [project1, project1_1],
@@ -133,12 +223,14 @@ const projects = [
   {
     images: [project5, project5_1, project5_2],
     alt: "Ecom Store",
+    description: descriptionProject5,
     siteUrl: "https://react-app-thong-23.netlify.app/",
     githubUrl: "https://github.com/norbadboy/React-CA-Thong-23",
   },
   {
     images: [project6, project6_1, project6_2],
     alt: "Community Science Museum",
+    description: descriptionProject6,
     siteUrl: "https://semester-project-winter-2021-thong-ho.netlify.app/",
     githubUrl: "https://github.com/norbadboy/Noroff-FEU-Semester-Project-Thong",
   },
