@@ -72,7 +72,9 @@ function ExperiencePage({ experienceRef }) {
                   <StyledH2>Check out my résumé!</StyledH2>
                   <div className="mt-5">
                     <a
-                      href={"/"}
+                      href={
+                        "https://drive.google.com/file/d/1ADypZqdgm9-oj0vdJ5rK19DD726PmUOW/view?usp=sharing"
+                      }
                       className="experiencePage_Footer_Link"
                       target="_blank"
                       rel="noreferrer"
