@@ -8,7 +8,7 @@ function ContactPage({ contactRef }) {
   return (
     <div ref={contactRef} className="contactPage_Container">
       <Row className="contactPage_Row m-0">
-        <Col className="mt-5 d-flex flex-column align-items-center justify-content-start">
+        <Col className="d-flex flex-column align-items-center justify-content-start">
           <div className="mb-1 contactPage_Title_Container">
             <div>
               <FontAwesomeIcon icon="fa-solid fa-paper-plane" className="contactPage_Icon" />

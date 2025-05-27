@@ -9,3 +9,7 @@
   max-width: max-content;
   border-top: 1px solid #161515ed;
 }
+
+.MuiPaper-root {
+  background-color: black;
+}
