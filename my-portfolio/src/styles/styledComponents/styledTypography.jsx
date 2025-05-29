@@ -96,6 +96,11 @@ export const StyledP = styled.p`
   max-width: 650px;
 `;
 
+export const StyledCenterP = styled(StyledP)`
+  text-align: center;
+  margin: 0;
+`;
+
 export const StyledUL = styled.ul`
   ${textStyles}
   margin: 0 10px;

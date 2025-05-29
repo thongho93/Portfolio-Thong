@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 import backgroundMain from "../../pictures/backgroundMain.jpg";
 
 export const BackgroundImage = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0;
@@ -69,7 +69,11 @@ export const ArrowButton = styled.button`
 export const AboutPageContainer = styled.div`
   min-height: 100vh;
   background-color: white;
-  padding: 75px 0;
+  padding: 75px 100px;
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 20px;
+  }
 `;
 
 export const AboutPageTitle = styled.h1`
@@ -108,6 +112,11 @@ export const AboutPageSelfClaimContainer = styled.div`
   padding: 20px 60px;
   width: 650px;
   margin: 0 auto;
+
+  @media screen and (max-width: 690px) {
+    width: 100%;
+    padding: 20px;
+  }
 `;
 export const AboutPageSubtitleContainer = styled.div`
   margin-bottom: 10px;
@@ -130,21 +139,10 @@ export const AboutIconsBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   @media screen and (max-width: 520px) {
     margin-bottom: 20px;
-  }
-`;
-
-export const AboutSelfClaimContainer = styled.div`
-  background-color: #f0f0f0;
-  padding: 20px 60px;
-  width: 650px;
-  margin: 0 auto;
-
-  @media screen and (max-width: 690px) {
-    width: 100%;
-    padding: 20px;
   }
 `;
 
@@ -165,10 +163,29 @@ export const PassionRow = styled.div`
 
 export const PassionTitle = styled.h1`
   font-size: 35px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 26px;
+  }
 `;
 
 export const PassionSubtitle = styled.h2`
   font-size: 22.5px;
+  padding-left: 10px;
+`;
+
+export const PassionTextBlock = styled.div`
+  max-width: 720px;
+  text-align: start;
+  padding: 0 10px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.95rem;
+  }
 `;
 
 const spin = keyframes`
@@ -180,13 +197,31 @@ export const PassionIconContainer = styled.div`
   background-color: rgb(39, 35, 112);
   border-radius: 50%;
   padding: 50px;
+  margin: 25px;
   max-width: 170px;
   max-height: 250px;
 
-  &:hover .spin {
+  @media screen and (max-width: 768px) {
+    padding: 35px;
+    max-width: 130px;
+    max-height: 200px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 25px;
+    max-width: 100px;
+    max-height: 180px;
+  }
+`;
+
+export const SpinningIcon = styled.div`
+  display: inline-block;
+
+  ${PassionIconContainer}:hover & {
     animation: ${spin} 0.43s linear;
   }
 `;
+
 // --- EXPERIENCE PAGE ---
 export const ExperienceContainer = styled.div`
   min-height: 100vh;
@@ -214,7 +249,6 @@ export const ExperienceFooterImage = styled.div`
   background-attachment: fixed;
   width: 100%;
   height: 300px;
-  object-fit: cover;
   background-size: 240% auto;
 
   @media screen and (max-width: 769px) {
