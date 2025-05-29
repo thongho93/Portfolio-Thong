@@ -31,18 +31,18 @@ export const StyledH1 = styled.h1`
   }
 `;
 
+const responsiveMainH1 = (props) => css`
+  @media screen and (max-width: 375px) {
+    font-size: 3.7rem;
+  }
+`;
 export const StyledMainH1 = styled(StyledH1)`
   font-size: 4rem;
   color: #ffff;
   ::selection {
     background-color: #ffb8b1;
   }
-  ${(props) =>
-    css`
-      @media screen and (max-width: 375px) {
-        font-size: 3.7rem;
-      }
-    `}
+  ${responsiveMainH1}
 `;
 
 export const StyledH2 = styled.h2`
@@ -81,16 +81,17 @@ const textStyles = css`
   ::selection {
     background-color: #ffb8b1;
   }
-  ${(props) =>
-    css`
-      @media screen and (max-width: 375px) {
-        margin: 0;
-      }
-    `}
+`;
+
+const responsiveText = (props) => css`
+  @media screen and (max-width: 375px) {
+    margin: 0;
+  }
 `;
 
 export const StyledP = styled.p`
   ${textStyles}
+  ${responsiveText}
   margin: 0 20px;
   max-width: 650px;
 `;
