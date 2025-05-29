@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyles from "./styles/GlobalStyles.jsx";
+import GlobalStyle from "./styles/GlobalStyles.jsx";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
 
@@ -16,7 +16,7 @@ root.render(
     }}
   >
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
+      <GlobalStyle />
       <App />
     </ThemeProvider>
   </BrowserRouter>
