@@ -20,6 +20,7 @@ export const StyledSecondaryTypography = styled.p`
 `;
 
 export const StyledH1 = styled.h1`
+  font-size: 2.5rem;
   font-family: "Lato", sans-serif;
   text-decoration: none;
   letter-spacing: 0.15rem;
@@ -46,6 +47,7 @@ export const StyledMainH1 = styled(StyledH1)`
 `;
 
 export const StyledH2 = styled.h2`
+  font-size: 2rem;
   font-family: "Lato", sans-serif;
   text-decoration: none;
   letter-spacing: 0.15rem;
@@ -72,7 +74,7 @@ const textStyles = css`
   /* Removed margin and max-width from here */
   font-family: "Roboto Slab", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 18px;
   text-decoration: none;
   letter-spacing: 0.045rem;
   text-align: justify;

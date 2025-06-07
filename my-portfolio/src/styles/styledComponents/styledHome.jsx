@@ -1,5 +1,8 @@
 import styled, { keyframes } from "styled-components";
 import backgroundMain from "../../pictures/backgroundMain.jpg";
+import backgroundExperiencePage from "../../pictures/backgroundExperiencePage.jpg";
+import { StyledH1, StyledH2, StyledH3, StyledP } from "./styledTypography";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const BackgroundImage = styled.div`
   position: relative;
@@ -18,7 +21,7 @@ export const BackgroundImage = styled.div`
 `;
 
 // --- HOME PAGE ---
-export const HomePageTitle = styled.h1`
+export const HomePageTitle = styled(StyledH1)`
   margin-bottom: 20px;
   color: white;
   font-size: 4rem;
@@ -32,7 +35,7 @@ export const HomePageTitle = styled.h1`
   }
 `;
 
-export const HomePageSubtitle = styled.p`
+export const HomePageSubtitle = styled(StyledH3)`
   color: white;
   font-family: "Roboto Slab", Courier, monospace;
   font-size: 1.4rem;
@@ -76,7 +79,7 @@ export const AboutPageContainer = styled.div`
   }
 `;
 
-export const AboutPageTitle = styled.h1`
+export const AboutPageTitle = styled(StyledH1)`
   font-size: 35px;
 `;
 export const AboutPageImage = styled.img`
@@ -88,6 +91,7 @@ export const AboutPageImage = styled.img`
 `;
 
 export const AboutText = styled.div`
+  max-width: 720px;
   a {
     text-decoration: none;
     color: rgb(49, 43, 155);
@@ -161,9 +165,7 @@ export const PassionRow = styled.div`
   padding: 0 20px;
 `;
 
-export const PassionTitle = styled.h1`
-  font-size: 35px;
-
+export const PassionTitle = styled(StyledH1)`
   @media screen and (max-width: 768px) {
     font-size: 30px;
   }
@@ -173,12 +175,12 @@ export const PassionTitle = styled.h1`
   }
 `;
 
-export const PassionSubtitle = styled.h2`
-  font-size: 22.5px;
-  padding-left: 10px;
+export const PassionSubtitle = styled(StyledH2)`
+  display: flex;
+  justify-content: center;
 `;
 
-export const PassionTextBlock = styled.div`
+export const PassionTextBlock = styled(StyledP)`
   max-width: 720px;
   text-align: start;
   padding: 0 10px;
@@ -200,6 +202,11 @@ export const PassionIconContainer = styled.div`
   margin: 25px;
   max-width: 170px;
   max-height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     padding: 35px;
@@ -244,8 +251,34 @@ export const ExperienceCol = styled.div`
   padding: 0 20px;
 `;
 
+export const TechIconsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 650px;
+`;
+
+export const TechIcon = styled(FontAwesomeIcon)`
+  font-size: 75px;
+  width: 45%;
+  text-align: center;
+  margin-bottom: 10px;
+  color: ${(props) => props.iconcolor || "black"};
+
+  @media screen and (max-width: 575px) {
+    font-size: 55px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 345px) {
+    font-size: 30px;
+  }
+`;
+
 export const ExperienceFooterImage = styled.div`
-  background: url("../pictures/backgroundExperiencePage.jpg") no-repeat center;
+  background: url(${backgroundExperiencePage}) no-repeat center;
   background-attachment: fixed;
   width: 100%;
   height: 300px;

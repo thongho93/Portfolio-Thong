@@ -137,93 +137,6 @@ a:hover {
 }
 
 /* EXPERIENCE PAGE*/
-.experiencePage_Container {
-  min-height: 100vh;
-  background-color: white;
-  padding: 75px 0 0 0;
-}
-.experiencePage_Row {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.row > * {
-  padding: 0;
-}
-.experiencePage_Col {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  padding: 0 20px;
-}
-.experiencePage_Title {
-  font-size: 35px;
-}
-.experiencePage_Subtitle {
-  margin-bottom: 40px;
-}
-.techIcons_Container {
-  margin-bottom: 75px;
-  max-width: 650px;
-}
-
-.experiencePage_Footer_Image {
-  background: url("../pictures/backgroundExperiencePage.jpg") no-repeat center;
-  background-attachment: fixed;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  background-size: 240% auto;
-}
-.experiencePage_Footer_Content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
-}
-.experiencePage_Footer_Container_Text {
-  color: white;
-  text-align: center;
-  margin: 0 20px;
-}
-.experiencePage_Footer_Link {
-  border: 1px solid white;
-  padding: 12px 20px;
-  font-family: "Roboto Slab", Courier, monospace;
-  font-size: 21px;
-  cursor: pointer;
-}
-.experiencePage_Footer_Link:hover {
-  background-color: white;
-  color: black;
-}
-/* breakpoints */
-@media screen and (max-width: 769px) {
-  .experiencePage_Footer_Image {
-    background-size: 320% auto;
-  }
-}
-@media screen and (max-width: 575px) {
-  .techIcons_Container {
-    max-width: 450px;
-  }
-  .experiencePage_Footer_Image {
-    background-size: 580% auto;
-  }
-}
-@media screen and (max-width: 375px) {
-  .experiencePage_Footer_Image {
-    background-size: 680% auto;
-  }
-}
-@media screen and (max-width: 345px) {
-  .experiencePage_Footer_Image {
-    background-size: 780% auto;
-  }
-}
 
 /* WORK PAGE*/
 .workPage_Container {
@@ -402,6 +315,9 @@ a:hover {
 .contactPage_Container {
   padding: 75px 0;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contactPage_Row {
   width: 100%;
@@ -412,6 +328,8 @@ a:hover {
 .contactPage_Icon {
   font-size: 60px;
   color: rgb(39, 35, 112);
+  display: block;
+  margin: 0 auto;
 }
 .contactPage_Title {
   font-size: 35px;

@@ -10,9 +10,7 @@ function ContactPage({ contactRef }) {
       <Row className="contactPage_Row m-0">
         <Col className="d-flex flex-column align-items-center justify-content-start">
           <div className="mb-1 contactPage_Title_Container">
-            <div>
-              <FontAwesomeIcon icon="fa-solid fa-paper-plane" className="contactPage_Icon" />
-            </div>
+            <FontAwesomeIcon icon="fa-solid fa-paper-plane" className="contactPage_Icon" />
             <StyledH1 className="contactPage_Title">Get in touch!</StyledH1>
           </div>
           <div>
