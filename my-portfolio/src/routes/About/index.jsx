@@ -40,7 +40,7 @@ function AboutPage({ aboutRef }) {
           <AboutText>
             Hey! My name is <strong className="strongText">Thong</strong> and I'm a web developer
             with a passion for creating beautiful, intuitive and highly functional websites. I've
-            just graduated as a{" "}
+            graduated as a{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"

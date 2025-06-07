@@ -4,52 +4,75 @@ import backgroundExperiencePage from "../../pictures/backgroundExperiencePage.jp
 import { StyledH1, StyledH2, StyledH3, StyledP } from "./styledTypography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const BackgroundImage = styled.div`
+export const BackgroundWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  height: 100vh;
+  overflow: hidden;
+`;
+
+export const BlurredBackground = styled.div`
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${backgroundMain}) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+  filter: blur(6px);
+  z-index: 0;
+`;
+
+export const DarkOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+`;
+
+export const HeroContent = styled.div`
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 // --- HOME PAGE ---
-export const HomePageTitle = styled(StyledH1)`
-  margin-bottom: 20px;
-  color: white;
-  font-size: 5rem;
+export const StyledTextBox = styled.div`
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    padding: 1.5rem 2rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 2.2rem;
+    padding: 1rem 1.5rem;
   }
+`;
+export const HomePageTitle = styled(StyledH1)`
+  margin-bottom: 20px;
+  color: white;
+  font-size: clamp(2rem, 8vw, 5rem);
 `;
 
 export const HomePageSubtitle = styled(StyledH3)`
   color: white;
   font-family: "Roboto Slab", Courier, monospace;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   margin-top: 5px;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
 `;
-
+const bounce = keyframes`
+0%, 100% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-6px);
+}
+`;
 export const ArrowButton = styled.button`
   z-index: 1;
   position: absolute;
@@ -58,6 +81,10 @@ export const ArrowButton = styled.button`
   transform: translateX(-50%);
   background: none;
   border: none;
+
+  &:hover svg {
+    animation: ${bounce} 0.6s ease-in-out;
+  }
 
   @media (max-width: 768px) {
     bottom: 80px;
