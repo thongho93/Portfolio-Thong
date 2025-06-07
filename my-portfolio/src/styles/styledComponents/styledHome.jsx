@@ -24,7 +24,7 @@ export const BackgroundImage = styled.div`
 export const HomePageTitle = styled(StyledH1)`
   margin-bottom: 20px;
   color: white;
-  font-size: 4rem;
+  font-size: 5rem;
 
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -147,85 +147,6 @@ export const AboutIconsBody = styled.div`
 
   @media screen and (max-width: 520px) {
     margin-bottom: 20px;
-  }
-`;
-
-// --- PASSION PAGE ---
-export const PassionContainer = styled.div`
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  padding: 75px 0;
-`;
-
-export const PassionRow = styled.div`
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-`;
-
-export const PassionTitle = styled(StyledH1)`
-  @media screen and (max-width: 768px) {
-    font-size: 30px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 26px;
-  }
-`;
-
-export const PassionSubtitle = styled(StyledH2)`
-  display: flex;
-  justify-content: center;
-`;
-
-export const PassionTextBlock = styled(StyledP)`
-  max-width: 720px;
-  text-align: start;
-  padding: 0 10px;
-
-  @media screen and (max-width: 480px) {
-    font-size: 0.95rem;
-  }
-`;
-
-const spin = keyframes`
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-`;
-
-export const PassionIconContainer = styled.div`
-  background-color: rgb(39, 35, 112);
-  border-radius: 50%;
-  padding: 50px;
-  margin: 25px;
-  max-width: 170px;
-  max-height: 250px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    padding: 35px;
-    max-width: 130px;
-    max-height: 200px;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 25px;
-    max-width: 100px;
-    max-height: 180px;
-  }
-`;
-
-export const SpinningIcon = styled.div`
-  display: inline-block;
-
-  ${PassionIconContainer}:hover & {
-    animation: ${spin} 0.43s linear;
   }
 `;
 
