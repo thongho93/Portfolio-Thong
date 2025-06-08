@@ -148,15 +148,15 @@ function Header(props) {
                   component="a"
                   href="/"
                   sx={{
-                    mr: 2,
+                    mr: { xs: 1, md: 2 },
                     display: { xs: "none", md: "flex" },
                     color: "inherit",
                     fontWeight: 700,
-                    fontSize: "19px",
+                    fontSize: { xs: "18px", md: "20px" },
                     textTransform: "uppercase",
                     fontFamily: "Lato, sans-serif",
                     textDecoration: "none",
-                    letterSpacing: ".05rem",
+                    letterSpacing: ".07rem",
                     "&:hover": {
                       color: "lightgrey",
                     },
@@ -177,7 +177,7 @@ function Header(props) {
                     flexGrow: 1,
                     fontFamily: "Lato",
                     fontWeight: 500,
-                    fontSize: "20px",
+                    fontSize: { xs: "26px", md: "30px" },
                     letterSpacing: ".05rem",
                     color: "inherit",
                     textDecoration: "none",
@@ -257,8 +257,8 @@ function Header(props) {
                         display: "flex",
                         fontFamily: "Lato",
                         fontWeight: 700,
-                        fontSize: "18px",
-                        mx: 1,
+                        fontSize: { md: "16px", lg: "18px" },
+                        mx: { md: 0.5, lg: 1 },
                         "&:hover": {
                           backgroundColor: "black",
                           color: "lightgrey",

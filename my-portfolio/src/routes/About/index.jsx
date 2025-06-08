@@ -13,21 +13,18 @@ import {
   AboutPageSubtitleContainer,
   AboutIconsContainer,
   AboutIconsBody,
-} from "../../styles/styledComponents/styledHome";
+} from "../../styles/styledComponents/styledAbout";
 
 function AboutPage({ aboutRef }) {
   return (
     <AboutPageContainer ref={aboutRef}>
       <Box
         sx={{
-          minHeight: "100vh",
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "white",
-          color: "black",
           alignItems: "center",
-          padding: "0 20px",
+          padding: "0 25px",
         }}
       >
         <div>

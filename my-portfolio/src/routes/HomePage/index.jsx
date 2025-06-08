@@ -10,7 +10,6 @@ import {
   ArrowButton,
 } from "../../styles/styledComponents/styledHome";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import IconButton from "@mui/material/IconButton";
 import { motion } from "framer-motion";
 
 function HomePage({ aboutRef }) {

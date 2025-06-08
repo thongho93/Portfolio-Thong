@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 export const StyledH1 = styled.h1`
-  font-family: "Lato", sans-serif;
   text-decoration: none;
   letter-spacing: 0.15rem;
   font-weight: 500;
@@ -11,7 +10,6 @@ export const StyledH1 = styled.h1`
 `;
 
 export const StyledH2 = styled.h2`
-  font-family: "Lato", sans-serif;
   text-decoration: none;
   letter-spacing: 0.15rem;
   font-weight: 500;
@@ -19,14 +17,10 @@ export const StyledH2 = styled.h2`
 `;
 
 export const StyledH3 = styled.h3`
-  font-family: "Lato", sans-serif;
   text-decoration: none;
   letter-spacing: 0.15rem;
   font-weight: 500;
   text-transform: uppercase;
-  ::selection {
-    background-color: #ffb8b1;
-  }
 `;
 
 export const StyledP = styled.p`
@@ -35,7 +29,7 @@ export const StyledP = styled.p`
   text-decoration: none;
   letter-spacing: 0.045rem;
   line-height: 1.7;
-  color: #000000;
+  color: #333;
 `;
 
 export const StyledCenterP = styled(StyledP)`
