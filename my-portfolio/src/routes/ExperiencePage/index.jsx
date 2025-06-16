@@ -1,38 +1,37 @@
-import { Row, Col } from "react-bootstrap";
+import { StyledH2 } from "../../styles/styledComponents/styledTypography";
 import {
-  StyledH1,
-  StyledH2,
-  StyledH3,
-  StyledP,
-} from "../../styles/styledComponents/styledTypography";
-import {
+  ExperienceTitle,
+  ExperienceSubtitle,
+  ExperienceTextBlock,
   ExperienceContainer,
   ExperienceRow,
   ExperienceCol,
+  TechIconsContainer,
+  TechIcon,
   ExperienceFooterImage,
   ExperienceFooterContent,
   ExperienceFooterText,
   ExperienceLink,
-  TechIconsContainer,
-  TechIcon,
-} from "../../styles/styledComponents/styledHome";
+} from "../../styles/styledComponents/styledExperience";
 
 function ExperiencePage({ experienceRef }) {
   return (
-    <ExperienceContainer>
+    <ExperienceContainer ref={experienceRef}>
       <ExperienceRow>
         <ExperienceCol>
           <div>
-            <StyledH1>Experience</StyledH1>
+            <ExperienceTitle>Experience</ExperienceTitle>
           </div>
           <div className="mt-3">
-            <StyledP>
+            <ExperienceTextBlock>
               I have been doing web development for the past 2 years, and I'm always eager to learn
               more in this fast paced industry.
-            </StyledP>
+            </ExperienceTextBlock>
           </div>
-          <div className="m-5 d-flex flex-column align-items-center justify-content-start">
-            <StyledH3 className="mb-4">some technologies I've worked with:</StyledH3>
+          <div>
+            <ExperienceSubtitle className="mb-4">
+              some technologies I've worked with:
+            </ExperienceSubtitle>
             <TechIconsContainer>
               <TechIcon icon="fa-brands fa-html5" iconcolor="#e34f26" />
               <TechIcon icon="fa-brands fa-css3-alt" iconcolor="#005a9c" />

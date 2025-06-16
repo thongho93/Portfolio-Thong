@@ -33,15 +33,15 @@ export const PassionTitle = styled(StyledH1)`
 `;
 
 export const PassionSubtitle = styled(StyledH2)`
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 2.3vw, 1.3rem);
   display: flex;
   justify-content: center;
 `;
 
 export const PassionTextBlock = styled(StyledP)`
-  max-width: clamp(260px, 90%, 440px);
+  max-width: clamp(260px, 90%, 450px);
   width: 100%;
-  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
   text-align: left;
   margin-left: auto;
   margin-right: auto;

@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -16,11 +16,11 @@ const WorkPage = React.lazy(() => import("./routes/Work"));
 const ContactPage = React.lazy(() => import("./routes/Contact"));
 
 function Layout() {
-  const aboutRef = React.createRef();
-  const passionRef = React.createRef();
-  const experienceRef = React.createRef();
-  const workRef = React.createRef();
-  const contactRef = React.createRef();
+  const aboutRef = useRef(null);
+  const passionRef = useRef(null);
+  const experienceRef = useRef(null);
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <div style={{ backgroundColor: "white", overflowX: "hidden" }}>
@@ -30,10 +30,10 @@ function Layout() {
         experienceRef={experienceRef}
         workRef={workRef}
         contactRef={contactRef}
-      />{" "}
+      />
       <Suspense fallback={<div>Loading...</div>}>
         <HomePage aboutRef={aboutRef} />
-        <AboutPage aboutRef={aboutRef} passionRef={passionRef} />{" "}
+        <AboutPage aboutRef={aboutRef} passionRef={passionRef} />
         <PassionPage passionRef={passionRef} experienceRef={experienceRef} />
         <ExperiencePage experienceRef={experienceRef} workRef={workRef} />
         <WorkPage workRef={workRef} contactRef={contactRef} />

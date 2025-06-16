@@ -7,6 +7,7 @@ import BackpackIcon from "@mui/icons-material/Backpack";
 import {
   AboutPageContainer,
   AboutPageTitle,
+  SelfClaimTitle,
   AboutPageImage,
   AboutText,
   AboutPageSelfClaimContainer,
@@ -20,6 +21,7 @@ function AboutPage({ aboutRef }) {
     <AboutPageContainer ref={aboutRef}>
       <Box
         sx={{
+          minHeight: "100vh",
           width: "100%",
           display: "flex",
           flexDirection: "column",
@@ -58,7 +60,7 @@ function AboutPage({ aboutRef }) {
         </div>
         <AboutPageSelfClaimContainer>
           <AboutPageSubtitleContainer>
-            <StyledH3>Self Proclamations</StyledH3>
+            <SelfClaimTitle>Self Proclamations</SelfClaimTitle>
           </AboutPageSubtitleContainer>
           <AboutIconsContainer>
             <AboutIconsBody>

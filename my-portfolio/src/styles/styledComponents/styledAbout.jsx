@@ -1,17 +1,17 @@
-import styled from "styled-components";
-import { StyledH1 } from "./styledTypography";
+import styled from "@emotion/styled";
+import { StyledH1, StyledH3 } from "./styledTypography";
 
 export const AboutPageContainer = styled.div`
   min-height: 100vh;
   background-color: white;
-  padding: 75px 0;
+  padding: 20px 0 60px 0;
   @media screen and (max-width: 768px) {
     padding: 60px 20px;
   }
 `;
 
 export const AboutPageTitle = styled(StyledH1)`
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.3rem, 4vw, 2rem);
   text-align: center;
   margin-bottom: 10px;
   color: #333;
@@ -25,7 +25,9 @@ export const AboutPageImage = styled.img`
 `;
 
 export const AboutText = styled.div`
-  max-width: 720px;
+  max-width: 660px;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+
   a {
     text-decoration: none;
     color: rgb(49, 43, 155);
@@ -56,6 +58,17 @@ export const AboutPageSelfClaimContainer = styled.div`
     padding: 20px;
   }
 `;
+
+export const SelfClaimTitle = styled(StyledH3)`
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+`;
+
 export const AboutPageSubtitleContainer = styled.div`
   margin-bottom: 10px;
   text-transform: uppercase;
